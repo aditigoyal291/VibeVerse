@@ -25,8 +25,8 @@ const TopCharts = () => {
             { maxWidth: "sm", slideSize: "50%" },
           ]}
         >
-          {newrelease.map((items) => (
-            <Carousel.Slide>
+          {newrelease.map((items, i) => (
+            <Carousel.Slide key={i}>
               <Image
                 src={items.image}
                 height={200}

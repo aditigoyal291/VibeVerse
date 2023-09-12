@@ -7,7 +7,9 @@ const NewRelease = () => {
   return (
     <>
       <div className="flex ml-[4%]">
-        <h1 className="text-white/80 my-[5%] text-2xl font-semibold">New Releases</h1>
+        <h1 className="text-white/80 my-[5%] text-2xl font-semibold">
+          New Releases
+        </h1>
       </div>
       <div className="flex justify-center items-center rounded-lg">
         <Carousel
@@ -23,9 +25,15 @@ const NewRelease = () => {
             { maxWidth: "sm", slideSize: "50%" },
           ]}
         >
-          {newrelease.map((items) => (
-            <Carousel.Slide>
-              <Image src={items.image} height={200} width={200} alt="new1" className="rounded-lg" />
+          {newrelease.map((items, i) => (
+            <Carousel.Slide key={i}>
+              <Image
+                src={items.image}
+                height={200}
+                width={200}
+                alt="new1"
+                className="rounded-lg"
+              />
             </Carousel.Slide>
           ))}
           {/* ...other slides */}
