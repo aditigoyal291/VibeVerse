@@ -11,10 +11,10 @@ export default function Example() {
       <Menu as="div" className="flex justify-center">
         <div>
           <div>
-            <Menu.Button className="justify-center rounded-md  bg-opacity-20  text-sm font-medium text-white  ">
+            <Menu.Button className="justify-center rounded-md  bg-opacity-20 text-sm font-medium text-white  ">
               <AiOutlineDown className=" hidden sm:hidden lg:hidden " />
             </Menu.Button>
-            <Menu.Button className="justify-center rounded-md  bg-opacity-20  text-sm font-medium text-white ">
+            <Menu.Button className="justify-center rounded-md  bg-opacity-20  text-sm font-medium text-white">
               <AiOutlineMenu className=" md:hidden text-2xl font-extrabold" />
             </Menu.Button>
           </div>
@@ -28,13 +28,13 @@ export default function Example() {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute right-2 mt-12  w-[13rem] origin-top-right divide-y divide-gray-100 rounded-md text-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Items className="absolute right-2 mt-12  w-[13rem] origin-top-right divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-10 text-[#0a0a0a]">
             <div className="px-1 py-1 ">
               <Menu.Item>
                 {({ active }) => (
                   <button
                     className={`${
-                      active ? " text-white bg-[#0a0a0a]" : "text-white"
+                      active ? "text-[#0a0a0a] bg-[#0a0a0a]" : "text-[#0a0a0a]"
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
                     Download The App
@@ -67,7 +67,7 @@ export default function Example() {
                 {({ active }) => (
                   <button
                     className={`${
-                      active ? " text-white bg-[#0a0a0a]" : "text-white"
+                      active ? " text-white bg-[#0a0a0a] " : "text-white"
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
                     Podcasts
