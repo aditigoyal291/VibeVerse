@@ -9,7 +9,7 @@ const Slideshow = () => {
     <>
       <div className="flex justify-center">
         <div className="flex flex-col justify-center items-center border-white/20 border-[1px] rounded-md p-2 w-full md:w-[50%] mt-[2%]">
-          <Carousel withIndicators className="text-white " loop dragFree>
+          <Carousel withIndicators className="text-white " loop>
             {images.map((items, i) => (
               <Carousel.Slide className="" key={i}>
                 <Image
