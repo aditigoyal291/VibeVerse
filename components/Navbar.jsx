@@ -3,6 +3,7 @@ import Image from "next/image";
 import { options1, options2 } from "@/data/options";
 import Options from "./Options";
 import Menu from "./Menu";
+import Search from "./Search";
 const Navbar = () => {
   return (
     <>
@@ -22,19 +23,7 @@ const Navbar = () => {
               VibeVerse
             </h1>
           </div>
-          <form className="flex items-center">
-            <input
-              type="search"
-              className="bg-backgroud rounded-lg h-[2rem] outline-none border-[1px] border-slate-400 text-white p-4 pr-10 w-[12rem] md:h-[2.5rem] "
-            />
-            <Image
-              src="/images/search.png"
-              width={20}
-              height={20}
-              alt="search"
-              className="-translate-x-8"
-            />
-          </form>
+          <Search/>
           <div className="md:hidden">
             <Menu />
           </div>

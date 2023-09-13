@@ -11,7 +11,7 @@ const MUsicPlayer = () => {
       <div className="flex justify-center mt-[2%]">
         <input type="range" className="h-[4px] w-[98%] bg-red-700  " />
       </div>
-      <div className="h-20 w-full bg-[#0a0a0a]  flex items-center p-[2%] gap-[25%]">
+      <div className="h-20 w-full bg-[#0a0a0a]  flex items-center p-[2%] gap-[20%]">
         <div className="flex justify-between w-[12%] items-center">
           <Image
             src="/images/musiclogo_musicplayer.png"
@@ -22,11 +22,13 @@ const MUsicPlayer = () => {
           />
           <h1 className="text-white text-sm">Qaafirana</h1>
         </div>
-        <div className="flex gap-[4%] items-center w-[50%] ">
-          <BiShuffle className="text-white text-lg md:text-2xl" />
-          <div className="flex items-center ">
+        <div className="text-2xl gap-[15%] flex w-full items-center">
+          <BiShuffle className="text-slate-400 text-lg justify-center md:text-2xl " />
+          <div className="flex gap-[4%] w-[50%] ">
             <AiFillStepBackward className="text-white text-lg md:text-4xl" />
+
             <BsFillPlayFill className="text-white text-2xl md:text-4xl" />
+
             <AiFillStepForward className="text-white text-lg md:text-4xl" />
           </div>
         </div>
