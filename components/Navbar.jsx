@@ -23,7 +23,7 @@ const Navbar = () => {
               VibeVerse
             </h1>
           </div>
-          <Search/>
+          <Search className="bg-blue-500"/>
           <div className="md:hidden">
             <Menu />
           </div>

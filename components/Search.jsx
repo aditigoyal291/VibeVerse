@@ -1,81 +1,100 @@
 "use client";
+import { Button, Group } from "@mantine/core";
+import { SpotlightProvider, spotlight } from "@mantine/spotlight";
+// import { SpotlightAction } from '@mantine/spotlight';
+import {
+  IconHome,
+  IconDashboard,
+  IconFileText,
+  IconSearch,
+} from "@tabler/icons-react";
 
-import React, { useState } from "react";
-
-import Image from "next/image";
-const Search = () => {
-  const [searchData, setsearchData] = useState("");
+function SpotlightControl() {
   return (
-    <form className="flex items-center">
-      <input
-        type="search"
-        className="bg-backgroud rounded-lg h-[2rem] outline-none border-[1px] border-slate-400 text-white p-4 pr-10 w-[12rem] md:h-[2.5rem] md:w-[20rem] md:rounded-xl "
-        onChange={(event) => {
-          setsearchData(event.target.value);
-        }}
-      />
-      {search
-        .filter((val) => {
-          if (searchData == "") {
-            return val;
-          } else if (
-            val.name.toLowerCase().includes(searchData.toLowerCase())
-          ) {
-            return val;
-          }
-        })
-        .map((items, i) => (
-          <p key={i} className="hidden">
-            {items.name}
-          </p>
-        ))}
-      <Image
-        src="/images/search.png"
-        width={20}
-        height={20}
-        alt="search"
-        className="-translate-x-8"
-      />
-    </form>
+    <Group position="center">
+    
+        <form className="flex items-center justify-center w-full bg-red-500" onClick={spotlight.open}>
+          <input
+            type="search"
+            className="bg-backgroud rounded h-[2rem] outline-none border-[1px] border-slate-400 text-white md:h-[2.5rem]  w-full flex-grow flex-[1]"
+            onChange={(event) => {
+              setsearchData(event.target.value);
+            }}
+          />
+        </form>
+    
+    </Group>
   );
-};
+}
 
-export default Search;
-
-export const search = [
+export const actions = [
   {
-    name: "Aditi",
-    age: 20,
-    gemder: "Female",
+    title: "Home",
+    description: "Get to home page",
+    onTrigger: () => console.log("Home"),
+    icon: <IconHome size="1.2rem" />,
   },
   {
-    name: "Sarang",
-    age: 21,
-    gemder: "male",
+    title: "Dashboard",
+    description: "Get full information about current system status",
+    onTrigger: () => console.log("Dashboard"),
+    icon: <IconDashboard size="1.2rem" />,
   },
   {
-    name: "Nistha",
-    age: 20,
-    gemder: "Female",
+    title: "Documentation",
+    description: "Visit documentation to lean more about all features",
+    onTrigger: () => console.log("Documentation"),
+    icon: <IconFileText size="1.2rem" />,
   },
   {
-    name: "Pratyush",
-    age: 20,
-    gemder: "male",
+    title: "Home",
+    description: "Get to home page",
+    onTrigger: () => console.log("Home"),
+    icon: <IconHome size="1.2rem" />,
   },
   {
-    name: "Pragya",
-    age: 19,
-    gemder: "Female",
+    title: "Dashboard",
+    description: "Get full information about current system status",
+    onTrigger: () => console.log("Dashboard"),
+    icon: <IconDashboard size="1.2rem" />,
   },
   {
-    name: "Aditya",
-    age: 18,
-    gemder: "male",
+    title: "Documentation",
+    description: "Visit documentation to lean more about all features",
+    onTrigger: () => console.log("Documentation"),
+    icon: <IconFileText size="1.2rem" />,
   },
   {
-    name: "Shreya",
-    age: 21,
-    gemder: "Female",
+    title: "Home",
+    description: "Get to home page",
+    onTrigger: () => console.log("Home"),
+    icon: <IconHome size="1.2rem" />,
+  },
+  {
+    title: "Dashboard",
+    description: "Get full information about current system status",
+    onTrigger: () => console.log("Dashboard"),
+    icon: <IconDashboard size="1.2rem" />,
+  },
+  {
+    title: "Documentation",
+    description: "Visit documentation to lean more about all features",
+    onTrigger: () => console.log("Documentation"),
+    icon: <IconFileText size="1.2rem" />,
   },
 ];
+
+export default function Demo({...props}) {
+  return (
+    <SpotlightProvider
+  {...props} className="flex-1"
+      actions={actions}
+      searchIcon={<IconSearch size="1.2rem" />}
+      searchPlaceholder="Search..."
+      shortcut="mod + shift + 1"
+      nothingFoundMessage="Nothing found..."
+    >
+      <SpotlightControl className="w-full"/>
+    </SpotlightProvider>
+  );
+}

@@ -21,8 +21,9 @@ const TopCharts = () => {
           align="start"
           className="flex justify-center items-center mx-[5%] "
           breakpoints={[
-            { maxWidth: "md", slideSize: "50%" },
+            { maxWidth: "md", slideSize: "33.33%" },
             { maxWidth: "sm", slideSize: "50%" },
+            { maxWidth: "lg", slideSize: "25%" },
           ]}
         >
           {newrelease.map((items, i) => (

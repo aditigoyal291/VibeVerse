@@ -11,8 +11,10 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@mantine/carousel": "^6.0.20",
+    "@mantine/spotlight": "^6.0.20",
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide": "^4.1.4",
+    "@tabler/icons-react": "^2.34.0",
     "autoprefixer": "10.4.15",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",

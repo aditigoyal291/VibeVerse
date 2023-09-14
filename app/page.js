@@ -3,7 +3,7 @@ import Home from "@/components/Home";
 const page = () => {
   return (
     <>
-      <div className="min-h-screen bg-backgroud">
+      <div className="min-h-screen ">
         <Home />
       </div>
     </>
