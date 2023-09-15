@@ -12,17 +12,18 @@ import {
 function SpotlightControl() {
   return (
     <Group position="center">
-    
-        <form className="flex items-center justify-center w-full bg-red-500" onClick={spotlight.open}>
-          <input
-            type="search"
-            className="bg-backgroud rounded h-[2rem] outline-none border-[1px] border-slate-400 text-white md:h-[2.5rem]  w-full flex-grow flex-[1]"
-            onChange={(event) => {
-              setsearchData(event.target.value);
-            }}
-          />
-        </form>
-    
+      <form
+        className="flex items-center justify-center w-full"
+        onClick={spotlight.open}
+      >
+        <input
+          type="search"
+          className="bg-backgroud rounded h-[2rem] outline-none p-[1rem] border-[1px] border-slate-400 text-white md:h-[2.5rem]  w-full flex-grow flex-[1]"
+          onChange={(event) => {
+            setsearchData(event.target.value);
+          }}
+        />
+      </form>
     </Group>
   );
 }
@@ -84,17 +85,18 @@ export const actions = [
   },
 ];
 
-export default function Demo({...props}) {
+export default function Demo({ ...props }) {
   return (
     <SpotlightProvider
-  {...props} className="flex-1"
+      {...props}
+      className="flex-1"
       actions={actions}
       searchIcon={<IconSearch size="1.2rem" />}
       searchPlaceholder="Search..."
-      shortcut="mod + shift + 1"
+      shortcut="shift + 1"
       nothingFoundMessage="Nothing found..."
     >
-      <SpotlightControl className="w-full"/>
+      <SpotlightControl className="w-full" />
     </SpotlightProvider>
   );
 }

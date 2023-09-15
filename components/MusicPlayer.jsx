@@ -5,6 +5,7 @@ import { AiFillBackward, AiFillStepBackward } from "react-icons/ai";
 import { AiFillStepForward } from "react-icons/ai";
 import { BsFillPlayFill } from "react-icons/bs";
 import { RxLoop } from "react-icons/rx";
+import songs from "@/data/songs";
 const MUsicPlayer = () => {
   return (
     <>
@@ -20,7 +21,8 @@ const MUsicPlayer = () => {
             alt="musicplayer"
             className="rounded-full"
           />
-          <h1 className="text-white text-sm">Qaafirana</h1>
+
+          <h1 className="text-white text-sm">Shape Of You</h1>
         </div>
         <div className="text-2xl gap-[15%] flex w-full items-center">
           <BiShuffle className="text-slate-400 text-lg justify-center md:text-2xl " />
