@@ -4,6 +4,7 @@ import Slideshow from "./Slideshow";
 import Mood from "./Mood";
 import NewRelease from "./NewRelease";
 import TopCharts from "./TopCharts";
+// import AudioPlayer from "./AudioPlayer";
 import MusicPlayer from "./MusicPlayer";
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
       <NewRelease />
       <TopCharts />
       <MusicPlayer />
+      {/* <AudioPlayer /> */}
     </>
   );
 };
